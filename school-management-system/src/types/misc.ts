@@ -49,3 +49,13 @@ export interface Settings {
   updatedAt: string;
   updatedBy: string;
 }
+
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+}

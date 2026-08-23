@@ -288,7 +288,6 @@ export const MOCK_DASHBOARD_STATS = {
     trialSchools: 1,
     suspendedSchools: 1,
     monthlyRecurringRevenue: 280000,
-    recentSchools: MOCK_SCHOOLS.slice(0, 5),
   },
   school: {
     totalStudents: 10,
