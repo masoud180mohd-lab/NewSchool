@@ -1,48 +1,62 @@
-# Operating-system files
-.DS_Store
-Thumbs.db
-Desktop.ini
-
-# Cloud-drive sync / upload temp artifacts (OneDrive, Google Drive, etc.)
-.tmp.driveupload/
-.tmp.drivedownload/
-~$*.docx
-*.tmp
-
-# Local environment and secrets
-.local/
-.env
-.env.*
-!.env.example
-!.env.*.example
-*.pem
-*.key
-*.p12
-*.pfx
-*.crt
-
-# JavaScript and TypeScript tooling outputs
+```
+# Dependencies
 node_modules/
+
+# Build artifacts
 dist/
 build/
 .next/
-.turbo/
-.nx/
-coverage/
-*.tsbuildinfo
-.eslintcache
+out/
 
-# Test and diagnostic artifacts
-playwright-report/
-test-results/
+# Environment variables
+.env
+.env.local
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git/modules/
+.DS_Store
+Thumbs.db
+
+# TypeScript/JavaScript
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Next.js
+.next/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
 *.log
 
-# Local editor settings
-.idea/
-.vscode/
-!.vscode/extensions.json
-!.vscode/settings.json
+# Temp files
+*.tmp
 
-# Office / binary drafts (kit markdown is source of truth)
-*.docx
-*.doc
+# Coverage
+coverage/
+.nyc_output/
+```
