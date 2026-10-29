@@ -20,9 +20,27 @@ Browse available skills at [skills.sh](https://skills.sh/).
 
 ## Getting started
 
-```bash
-npm install
+The Phase 1 Next.js application lives in [`school-management-system/`](school-management-system/README.md). It includes TypeScript, Tailwind CSS, shadcn/ui-style primitives, ESLint, Prettier, and Git safety documentation. School modules are not built yet.
+
+From this workspace root in PowerShell, run each command separately:
+
+```powershell
+npm.cmd --prefix school-management-system ci
+Copy-Item school-management-system/.env.example school-management-system/.env.local
+npm.cmd --prefix school-management-system run dev
 ```
+
+Copy the environment template only on first setup; preserve existing local values. See the [application README](school-management-system/README.md) for all checks and setup instructions.
+
+## Git backup
+
+The application uses this existing Git repository, not a nested repository. A local commit is not an off-device backup. After creating a verified commit, push Phase 1 with:
+
+```powershell
+git -C C:\Users\masou\NewSchool push -u origin master
+```
+
+Confirm the commit appears on GitHub. See [Git rules and recovery](school-management-system/docs/git-rules.md).
 
 ## Structure
 
@@ -31,6 +49,7 @@ NewSchool/
 ├── .agents/skills/     # Project agent skills (development, design, security)
 ├── .cursor/skills/     # Extended Cursor skills library
 ├── skills-lock.json    # Installed skills lockfile
+├── school-management-system/  # Phase 1 Next.js application and docs
 └── README.md
 ```
 
